@@ -1,7 +1,5 @@
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -ErrorAction SilentlyContinue
 
-
-
 $csvPath = Join-Path $PSScriptRoot "employees.csv"
 
 $today = Get-Date
@@ -37,7 +35,6 @@ foreach ($employee in $employees) {
 
         # Windows Notification
         
-
         $found = $true
     }
 }

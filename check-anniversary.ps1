@@ -1,6 +1,6 @@
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -ErrorAction SilentlyContinue
 
-Import-Module BurntToast
+
 
 $csvPath = Join-Path $PSScriptRoot "employees.csv"
 
@@ -36,8 +36,7 @@ foreach ($employee in $employees) {
         Write-Host "Years    : $years"
 
         # Windows Notification
-        New-BurntToastNotification `
-            -Text "Work Anniversary", "$($employee.Name) has completed $years years!"
+        
 
         $found = $true
     }
